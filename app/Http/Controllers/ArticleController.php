@@ -7,7 +7,6 @@ use App\Models\Article;
 use App\Models\Comment;
 class ArticleController extends Controller
 {
-    //
     public function index() {
         return Article::all();
     }

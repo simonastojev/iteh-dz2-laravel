@@ -35,10 +35,7 @@ Route::get('/', function () {
 Route::get('/article/{id}',[App\Http\Controllers\ViewArticleController::class, 'index'])->name('viewArticle');
 Route::get('/articleDel/{id}',[App\Http\Controllers\ViewArticleController::class, 'delete'])->name('deleteArticleWeb');
 
-
 Route::get('/writeArticle',[App\Http\Controllers\WriteArticleController::class, 'index'])->name('writeArticle');
-
-
 
 Route::get('/register', array('as'=>'webRegister', function() {
     return view('auth.register');
@@ -48,12 +45,11 @@ Route::get('/login', array('as'=>'webLogin', function() {
     return view('auth.login');
 }));
 
-
 //Route::get('/login', [App\Http\Controllers\ViewLoginController::class, 'index'])->name('login');
 // Route::get('api/login', array('as'=>'logedin', function() {
-//     //return view('/hom');
-//     $response = app();
-//     return redirect('/home');
+// return view('/hom');
+// $response = app();
+// return redirect('/home');
 // }));
 
 // Route::get('api/logout', array('as'=>'logedout', function() {
@@ -66,7 +62,3 @@ Route::get('/login', array('as'=>'webLogin', function() {
 // Route::get('/auth/logout', function() {
 //     return view('welcome');
 // });
-
-
-
-

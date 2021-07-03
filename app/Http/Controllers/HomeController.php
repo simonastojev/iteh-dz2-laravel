@@ -27,16 +27,14 @@ class HomeController extends Controller
     {
 
       $article = ['article' => (object)[
-        'title' =>'nema',
-        'created_at' =>'nicega',
+        'title' =>'no_title',
+        'created_at' =>'no_date',
         'comments_no' =>'0'
       ]];
 
       $article = (object) $article;
 
-
      $request = Request::create(route('getArticlesAndComments'), 'GET');
-
 
       $response = app()->handle($request);
      // echo $response;

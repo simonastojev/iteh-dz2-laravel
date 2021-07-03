@@ -8,11 +8,10 @@ use App\Models\Comment;
 
 class CommentController extends Controller
 {
-    //
     public function index() {
         return Comment::all();
     }
-    
+
     public function indexJoin($article_id) {
         return DB::table('comments')
             ->join('articles', 'comments.article_id', '=', 'articles.id')

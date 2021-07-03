@@ -2,15 +2,12 @@
 
 @section('content')
 
-
-
-
 <div class="container">
     <div class="row justify-content-center">
 
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header headerNaslov">{{ $article->title }}</div>        
+                <div class="card-header headerNaslov">{{ $article->title }}</div>
                 <div class="card-body">
                     <div class="forma">
                         <h5 class="telo">{{ $article->body }}</h5>
@@ -29,13 +26,13 @@
                         @foreach($comments as $comm)
                         <div class="card-body" style="background-color:white">
                             <h5 class="username">{{ $comm->username }}</h5>
-                            <h5 class="komentar">{{ $comm->text }}</h5>  
-                            <h5 class="datumKom">{{ $comm->created_at }}</h5>                    
-                        </div>  
+                            <h5 class="komentar">{{ $comm->text }}</h5>
+                            <h5 class="datumKom">{{ $comm->created_at }}</h5>
+                        </div>
                         @endforeach
                         <div class="card-body" style="background-color:white">
-                            <a class="napisiKom" onclick="pisanjeKom()">Write a comment</a>  
-                        </div>                            
+                            <a class="napisiKom" onclick="pisanjeKom()">Write a comment</a>
+                        </div>
                     </div>
 
                 </div>
@@ -52,8 +49,8 @@
                             <h5 class="write">Comment</h5>
                             <textarea name="text" class="commentInput input" rows="5"></textarea><br>
                             <button type="submit" onclick="return confirm('Do you want to post your comment?')" class="btn btn-primary dugme2">Submit</button>
-                    </form>  
-            </div>                         
+                    </form>
+            </div>
         </div>
 
     </div>

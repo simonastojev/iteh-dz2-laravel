@@ -1,0 +1,29 @@
+{
+
+    "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "Launch & Debug",
+            "configurations": [ "Launch currently open script", "Launch localhost" ]
+        }
+    ],
+
+    "configurations": [
+
+        {
+            "name": "Launch currently open script",
+            "type": "php",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${fileDirname}",
+            "port": 8000
+        },
+        {
+                "name": "Launch localhost",
+                "type": "chrome",
+                "request": "launch",
+                "url": "http://localhost:8000/",
+                "webRoot": "${workspaceRoot}"
+            }
+    ]
+}
